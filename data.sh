@@ -1,10 +1,10 @@
 #!/bin/bash
-sudo su -
-yum install git -y
-yum install python3 -y
-yum install python3-pip -y
-cd /tmp
+sudo yum install git -y
+sudo yum install python-pip3 -y
 git clone https://github.com/sunny-7893320220/Medical-Insurance.git
-cd /tmp/Medical-Insurance/
+cd /
+sudo mv Medical-Insurance /home/ec2-user/
+cd /home/ec2-user/
+cd Medical-Insurance/
 pip3 install -r requirements.txt
-screen -m -d python3 app.py 
+screen -m -d python3 app.py
